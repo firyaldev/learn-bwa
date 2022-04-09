@@ -63,6 +63,14 @@ registerRoute(
   })
 )
 
+// todo 7
+self.addEventListener('install', function (event) {
+  console.log('sw install')
+})
+self.addEventListener('activate', function (event) {
+  console.log('sw activate')
+})
+
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener('message', event => {
